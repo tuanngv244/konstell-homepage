@@ -8,11 +8,11 @@ const solutionData = schemaData.solutions['hawkey'];
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/hawkey`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${solutionData.name} | Winways Inc. `,
+  title: `${solutionData.name} | Konstell Inc. `,
   description: solutionData.description,
   keywords: ['hawkey', 'trading solution', 'financial software', 'high-speed trading'],
   openGraph: {
-    title: `${solutionData.name} | Winways Inc.`,
+    title: `${solutionData.name} | Konstell Inc.`,
     description: solutionData.description,
     url: pageUrl,
     type: 'website',

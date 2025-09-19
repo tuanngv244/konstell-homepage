@@ -12,7 +12,7 @@ export const useTitle = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    document.title = findNavByPath(navLinks, pathname)?.title || 'Winways Inc.';
+    document.title = findNavByPath(navLinks, pathname)?.title || 'Konstell Inc.';
   }, [i18n.language, t]);
   return {};
 };

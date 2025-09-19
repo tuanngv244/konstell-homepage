@@ -4,8 +4,8 @@ export function OrganizationSchema() {
   const organizationSchema: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Winways Inc.',
-    alternateName: 'winways Inc.',
+    name: 'Konstell Inc.',
+    alternateName: 'Konstell Inc.',
     description:
       'Great idea & Creative Technology - Advanced Financial Trading Systems and Technology Solutions',
     url: process.env.NEXT_PUBLIC_SITE_URL,

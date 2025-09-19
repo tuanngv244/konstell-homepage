@@ -7,10 +7,10 @@ import LoadingPage from '@/@core/components/loading-page';
 import { OrganizationSchema } from '@/@core/components/seo';
 
 export const metadata: Metadata = {
-  title: 'Winways Inc.',
+  title: 'Konstell Inc.',
   description: 'Great idea & Creative Technology',
   openGraph: {
-    title: 'Winways Inc.',
+    title: 'Konstell Inc.',
     description: 'Great idea & Creative Technology',
   },
 };
@@ -45,7 +45,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://winways.kr/" />
-        <meta property="og:title" content="Winways Inc." />
+        <meta property="og:title" content="Konstell Inc." />
         <meta property="og:description" content="Great Idea & Creative Technology" />
         <meta property="og:image" content="/favicon-512x512.png" />
         <meta property="og:image:width" content="512" />

@@ -13,11 +13,11 @@ const tradingSystemsData = schemaData.tradingSystems['fx-trading-system'];
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/fx-trading-system`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${tradingSystemsData.name} | Winways Inc. `,
+  title: `${tradingSystemsData.name} | Konstell Inc. `,
   description: tradingSystemsData.description,
   keywords: ['fx trading system', 'trading solution', 'financial software', 'high-speed trading'],
   openGraph: {
-    title: `${tradingSystemsData.name} | Winways Inc.`,
+    title: `${tradingSystemsData.name} | Konstell Inc.`,
     description: tradingSystemsData.description,
     url: pageUrl,
     type: 'website',

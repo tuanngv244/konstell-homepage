@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 
 export const sharedMetadata: Metadata = {
-  title: 'winways Inc.',
+  title: 'Konstell Inc.',
   description: 'Great idea & Creative Technology',
   openGraph: {
-    title: 'winways Inc.',
+    title: 'Konstell Inc.',
     description: 'Great idea & Creative Technology',
   },
 };

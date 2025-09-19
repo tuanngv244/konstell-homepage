@@ -26,11 +26,11 @@ export function TradingSystemSchema({
     category: 'Financial Trading System',
     brand: {
       '@type': 'Brand',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
     },
     manufacturer: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
     offers: {
@@ -40,7 +40,7 @@ export function TradingSystemSchema({
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Winways Inc.',
+        name: 'Konstell Inc.',
       },
       businessFunction: 'https://schema.org/Sell' as any,
     },

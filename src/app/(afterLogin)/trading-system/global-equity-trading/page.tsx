@@ -13,7 +13,7 @@ const tradingSystemsData = schemaData.tradingSystems['global-equity-trading'];
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/global-equity-trading`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${tradingSystemsData.name} | Winways Inc. `,
+  title: `${tradingSystemsData.name} | Konstell Inc. `,
   description: tradingSystemsData.description,
   keywords: [
     'global equity trading',
@@ -22,7 +22,7 @@ export const metadata: Metadata = generateMetadata({
     'high-speed trading',
   ],
   openGraph: {
-    title: `${tradingSystemsData.name} | Winways Inc.`,
+    title: `${tradingSystemsData.name} | Konstell Inc.`,
     description: tradingSystemsData.description,
     url: pageUrl,
     type: 'website',

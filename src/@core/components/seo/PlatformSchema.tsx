@@ -31,16 +31,16 @@ export function PlatformSchema({
     dateModified: new Date().toISOString().split('T')[0],
     provider: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
     creator: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://winway-system.com/logos/logo.svg',
@@ -53,7 +53,7 @@ export function PlatformSchema({
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Winways Inc.',
+        name: 'Konstell Inc.',
       },
       businessFunction: 'https://schema.org/Sell' as any,
     },

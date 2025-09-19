@@ -9,11 +9,11 @@ const solutionData = schemaData.solutions['f1win'];
 const pageUrl = 'https://winway-system.com/solutions/f1win';
 
 export const metadata: Metadata = generateMetadata({
-  title: `${solutionData.name} | Winways Inc. `,
+  title: `${solutionData.name} | Konstell Inc. `,
   description: solutionData.description,
   keywords: ['f1win', 'trading solution', 'financial software', 'high-speed trading'],
   openGraph: {
-    title: `${solutionData.name} | Winways Inc.`,
+    title: `${solutionData.name} | Konstell Inc.`,
     description: solutionData.description,
     url: pageUrl,
     type: 'website',

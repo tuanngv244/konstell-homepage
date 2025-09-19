@@ -13,14 +13,14 @@ import { Metadata } from 'next';
 const pageUrl = 'https://winway-system.com/company';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'About Company | Winways Inc. - Financial Technology Leaders',
+  title: 'About Company | Konstell Inc. - Financial Technology Leaders',
   description:
-    'Learn about Winways Inc., a leading financial technology company providing innovative trading systems and solutions for global markets.',
+    'Learn about Konstell Inc., a leading financial technology company providing innovative trading systems and solutions for global markets.',
   keywords: ['about winways', 'fintech company', 'financial technology', 'trading systems company'],
   openGraph: {
-    title: 'About Winways Inc. - Financial Technology Leaders',
+    title: 'About Konstell Inc. - Financial Technology Leaders',
     description:
-      'Learn about Winways Inc., a leading financial technology company providing innovative trading systems and solutions.',
+      'Learn about Konstell Inc., a leading financial technology company providing innovative trading systems and solutions.',
     url: pageUrl,
     type: 'website',
   },
@@ -38,8 +38,8 @@ export default async function Company() {
     <>
       {/* JSON-LD Schemas */}
       <WebPageSchema
-        name="About Winways Inc."
-        description="Learn about Winways Inc., a leading financial technology company"
+        name="About Konstell Inc."
+        description="Learn about Konstell Inc., a leading financial technology company"
         url={pageUrl}
         type="AboutPage"
         breadcrumbs={breadcrumbs}

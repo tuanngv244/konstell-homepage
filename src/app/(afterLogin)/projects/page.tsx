@@ -12,14 +12,14 @@ import ProjectPage from '@/views/project';
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/project`;
 
 export const metadata: Metadata = generateMetadata({
-    title: 'Project | Winways Inc. ',
+    title: 'Project | Konstell Inc. ',
     description:
-        'Learn about Winways Inc., a leading financial technology company providing innovative trading systems and solutions for global markets.',
+        'Learn about Konstell Inc., a leading financial technology company providing innovative trading systems and solutions for global markets.',
     keywords: ['project winways', 'fintech company', 'financial technology', 'trading systems company'],
     openGraph: {
-        title: 'Project | Winways Inc. ',
+        title: 'Project | Konstell Inc. ',
         description:
-            'Learn about Winways Inc., a leading financial technology company providing innovative trading systems and solutions.',
+            'Learn about Konstell Inc., a leading financial technology company providing innovative trading systems and solutions.',
         url: pageUrl,
         type: 'website',
     },
@@ -36,8 +36,8 @@ export default async function Project() {
         <>
             {/* JSON-LD Schemas */}
             <WebPageSchema
-                name="Project | Winways Inc."
-                description="Learn about Winways Inc., a leading financial technology company"
+                name="Project | Konstell Inc."
+                description="Learn about Konstell Inc., a leading financial technology company"
                 url={pageUrl}
                 type="AboutPage"
                 breadcrumbs={breadcrumbs}

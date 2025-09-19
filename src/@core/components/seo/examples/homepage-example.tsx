@@ -7,9 +7,9 @@ import { generateMetadata } from '@/app/shared-metadata';
 
 export const metadata: Metadata = {
   ...generateMetadata(),
-  title: 'Home | Winways Inc.',
+  title: 'Home | Konstell Inc.',
   description:
-    'Winways Inc. provides advanced financial trading systems, platforms, and technology solutions for global markets. Specializing in FX, equity, derivatives, and bond trading systems.',
+    'Konstell Inc. provides advanced financial trading systems, platforms, and technology solutions for global markets. Specializing in FX, equity, derivatives, and bond trading systems.',
   keywords: [
     'financial technology',
     'trading systems',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     ...generateMetadata().openGraph,
-    title: 'Winways Inc.',
+    title: 'Konstell Inc.',
     description: 'Advanced financial trading systems and technology solutions for global markets',
     url: process.env.NEXT_PUBLIC_SITE_URL,
     type: 'website',

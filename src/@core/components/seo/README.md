@@ -1,4 +1,4 @@
-# JSON-LD SEO Schema Implementation for Winways Inc.
+# JSON-LD SEO Schema Implementation for Konstell Inc.
 
 This documentation provides comprehensive JSON-LD schema implementation for your Next.js application to improve SEO and search engine understanding.
 

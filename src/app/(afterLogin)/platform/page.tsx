@@ -8,11 +8,11 @@ const platformData = schemaData.platforms;
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/trading-system`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${platformData.name} | Winways Inc.`,
+  title: `${platformData.name} | Konstell Inc.`,
   description: platformData.description,
   keywords: ['fx trading system', 'trading solution', 'financial software', 'high-speed trading'],
   openGraph: {
-    title: `${platformData.name} | Winways Inc.`,
+    title: `${platformData.name} | Konstell Inc.`,
     description: platformData.description,
     url: pageUrl,
     type: 'website',

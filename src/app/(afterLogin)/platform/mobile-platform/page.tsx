@@ -8,11 +8,11 @@ const platformData = schemaData.platforms['mobile-platform'];
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/mobile-platform`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${platformData.name} | Winways Inc. `,
+  title: `${platformData.name} | Konstell Inc. `,
   description: platformData.description,
   keywords: ['mobile platform', 'trading solution', 'financial software', 'high-speed trading'],
   openGraph: {
-    title: `${platformData.name} | Winways Inc.`,
+    title: `${platformData.name} | Konstell Inc.`,
     description: platformData.description,
     url: pageUrl,
     type: 'website',

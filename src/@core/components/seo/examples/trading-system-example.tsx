@@ -14,7 +14,7 @@ const productData = schemaData.tradingSystems['fx-trading-system'];
 const pageUrl = 'https://winway-system.com/trading-system/fx-trading-system';
 
 export const metadata: Metadata = generateMetadata({
-  title: `${productData.name} | Winways Inc. - Professional FX Trading Platform`,
+  title: `${productData.name} | Konstell Inc. - Professional FX Trading Platform`,
   description: productData.description,
   keywords: [
     'fx trading',
@@ -24,7 +24,7 @@ export const metadata: Metadata = generateMetadata({
     'professional trading platform',
   ],
   openGraph: {
-    title: `${productData.name} | Winways Inc.`,
+    title: `${productData.name} | Konstell Inc.`,
     description: productData.description,
     url: pageUrl,
     type: 'website',

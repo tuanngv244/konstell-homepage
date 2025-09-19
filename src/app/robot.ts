@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'http://winways.com.vn/sitemap.xml',
+    sitemap: 'http://konstell.com.vn/sitemap.xml',
   };
 }
 

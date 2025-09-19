@@ -28,16 +28,16 @@ export function WebPageSchema({
     inLanguage: ['en', 'ko', 'vi'],
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       url: process.env.NEXT_PUBLIC_SITE_URL,
     },
     about: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://winway-system.com/logos/logo.svg',
@@ -65,7 +65,7 @@ export function WebPageSchema({
     }),
     mainEntity: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
     },
   };
 

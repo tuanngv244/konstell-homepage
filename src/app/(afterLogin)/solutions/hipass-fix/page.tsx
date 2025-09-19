@@ -8,11 +8,11 @@ const solutionData = schemaData.solutions['hipass-fix'];
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/hipass-fix`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${solutionData.name} | Winways Inc. `,
+  title: `${solutionData.name} | Konstell Inc. `,
   description: solutionData.description,
   keywords: ['hipass-fix', 'trading solution', 'financial software', 'high-speed trading'],
   openGraph: {
-    title: `${solutionData.name} | Winways Inc.`,
+    title: `${solutionData.name} | Konstell Inc.`,
     description: solutionData.description,
     url: pageUrl,
     type: 'website',

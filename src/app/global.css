@@ -12,7 +12,7 @@
   --grey-color-800: #1f1f1f;
   --grey-color-900: #141414;
   --two-nd-color: #6f77da;
-  --primary-color: #181d62;
+  --primary-color: #244CFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,7 +30,7 @@
     --grey-color-800: #1f1f1f;
     --grey-color-900: #141414;
     --two-nd-color: #6f77da;
-    --primary-color: #181d62;
+    --primary-color: #244CFF;
   }
 }
 
@@ -99,14 +99,6 @@ a.hover-line {
   }
 }
 
-@keyframes translateY {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
 
 .scroll-progress {
   display: none;
@@ -181,31 +173,4 @@ a.hover-line {
   /* Your styles here */
 }
 
-.animated-path {
-  stroke-dasharray: var(--path-length);
-  stroke-dashoffset: var(--path-length);
-  animation: drawPath 2s ease-in-out infinite;
-}
 
-@keyframes drawPath {
-  0% {
-    stroke-dashoffset: var(--path-length);
-    opacity: 0.3;
-  }
-  50% {
-    stroke-dashoffset: 0;
-    opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: calc(var(--path-length) * -1);
-    opacity: 0.3;
-  }
-}
-
-.svg-container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}

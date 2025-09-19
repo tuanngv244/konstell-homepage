@@ -35,7 +35,9 @@ module.exports = {
           600: '#6f77da',
         },
         primary: {
-          500: '#181D62', // Your main primary color
+          200: '#97B4FF',
+          400: '#4281FF',
+          600: '#244CFF',
         },
         gray: {
           50: '#f6f6f6',

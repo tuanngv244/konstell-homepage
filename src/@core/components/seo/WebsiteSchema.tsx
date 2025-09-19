@@ -4,14 +4,14 @@ export function WebsiteSchema() {
   const websiteSchema: WithContext<WebSite> = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Winways Inc.',
+    name: 'Konstell Inc.',
     description:
       'Great idea & Creative Technology - Advanced Financial Trading Systems and Technology Solutions',
     url: process.env.NEXT_PUBLIC_SITE_URL,
     inLanguage: ['en', 'ko', 'vi'],
     publisher: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://winway-system.com/logos/logo.svg',
@@ -29,7 +29,7 @@ export function WebsiteSchema() {
     },
     mainEntity: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       description: 'Financial Technology Company specializing in Trading Systems and Platforms',
     },
     about: {

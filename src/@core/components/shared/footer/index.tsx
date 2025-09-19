@@ -7,7 +7,6 @@ import Link from 'next/link';
 import { HeroIcons } from '../../icons/heroIcons';
 import LogoMain from '../../icons/LogoMain';
 import LogoMainV2 from '../../icons/LogoMainV2';
-import SocialBlog from '../../icons/SocialBlog';
 import SocialFacebook from '../../icons/SocialFacebook';
 import SocialInstagram from '../../icons/SocialInstagram';
 import SocialLinked from '../../icons/SocialLinked';
@@ -96,11 +95,6 @@ const Footer = (props: FooterProps) => {
       label: 'Facebook',
       Icon: SocialFacebook,
       href: 'https://www.facebook.com/winways.kr',
-    },
-    {
-      label: 'Blog',
-      Icon: SocialBlog,
-      href: 'https://blog.naver.com/winways-global',
     },
   ];
 

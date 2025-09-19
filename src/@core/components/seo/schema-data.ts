@@ -208,9 +208,9 @@ export const schemaData = {
   // Company FAQs
   companyFAQs: [
     {
-      question: 'What services does Winways Inc. provide?',
+      question: 'What services does Konstell Inc. provide?',
       answer:
-        'Winways Inc. provides comprehensive financial technology solutions including trading systems, platform solutions, market data services, and specialized software for financial institutions.',
+        'Konstell Inc. provides comprehensive financial technology solutions including trading systems, platform solutions, market data services, and specialized software for financial institutions.',
     },
     {
       question: 'Which markets do Winways trading systems support?',

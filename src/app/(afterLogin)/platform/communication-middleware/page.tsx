@@ -8,7 +8,7 @@ const platformData = schemaData.platforms['communication-middleware'];
 const pageUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/communication-middleware`;
 
 export const metadata: Metadata = generateMetadata({
-  title: `${platformData.name} | Winways Inc. `,
+  title: `${platformData.name} | Konstell Inc. `,
   description: platformData.description,
   keywords: [
     'communication middleware',
@@ -17,7 +17,7 @@ export const metadata: Metadata = generateMetadata({
     'high-speed trading',
   ],
   openGraph: {
-    title: `${platformData.name} | Winways Inc.`,
+    title: `${platformData.name} | Konstell Inc.`,
     description: platformData.description,
     url: pageUrl,
     type: 'website',

@@ -117,15 +117,15 @@ export function generateProductMetadata({ type, slug, url }: SchemaGeneratorProp
   switch (type) {
     case 'trading-system':
       data = schemaData.tradingSystems[slug as keyof typeof schemaData.tradingSystems];
-      titleSuffix = '| Trading System | Winways Inc.';
+      titleSuffix = '| Trading System | Konstell Inc.';
       break;
     case 'platform':
       data = schemaData.platforms[slug as keyof typeof schemaData.platforms];
-      titleSuffix = '| Platform | Winways Inc.';
+      titleSuffix = '| Platform | Konstell Inc.';
       break;
     case 'solution':
       data = schemaData.solutions[slug as keyof typeof schemaData.solutions];
-      titleSuffix = '| Solution | Winways Inc.';
+      titleSuffix = '| Solution | Konstell Inc.';
       break;
     default:
       return {};
@@ -138,7 +138,7 @@ export function generateProductMetadata({ type, slug, url }: SchemaGeneratorProp
     description: data.description,
     keywords: generateKeywords(data, type),
     openGraph: {
-      title: `${data.name} | Winways Inc.`,
+      title: `${data.name} | Konstell Inc.`,
       description: data.description,
       url,
       type: 'website' as const,

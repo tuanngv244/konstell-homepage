@@ -30,17 +30,7 @@ const DefaultPalette = (mode: any, skin: any, themeColor: any) => {
     } else return '#FFF';
   };
 
-  // -------------- CARD TEXT ---------- //
-  const cardBgColor = () => {
-    return mode === 'light' ? '#fff' : '#0b0b0b';
-  };
-  const cardBorderColor = () => {
-    return mode === 'light' ? '#e8e8e8' : '#262626';
-  };
-  const cardTextTitleColor = () => {
-    return mode === 'light' ? '#1A2035' : '#FAFAFA';
-  };
-  // -------------- CARD TEXT ---------- //
+
 
   const textColor = () => {
     const cls = {
@@ -75,13 +65,13 @@ const DefaultPalette = (mode: any, skin: any, themeColor: any) => {
       close: '#737373',
       trOdd: '#F8FBFF',
       bgGray: '#EAEBEC',
-      cardBorder: cardBorderColor(),
     },
     mode: mode,
     primary: {
       lighter: '#E8F5E9',
       light: '#97B4FF',
-      main: '#181D62',
+      medium: '#4281FF',
+      main: '#244CFF',
       dark: '#1D21B6',
       contrastText: '#FFF',
     },
@@ -153,8 +143,6 @@ const DefaultPalette = (mode: any, skin: any, themeColor: any) => {
       third: `#263238`,
       disabled: `rgba(${mainColor}, 0.38)`,
       label: '#402BB0',
-      sLabel: '#737373',
-      tLabel: '#404040',
       link: '#263238',
       copy: '#6A6A6A',
       neutral900: '#1A2035',
@@ -173,7 +161,6 @@ const DefaultPalette = (mode: any, skin: any, themeColor: any) => {
       black400: '#E8E8E8',
       black500: '#D9D9D9',
       black900: '#262626',
-      cardTitle: cardTextTitleColor(),
       mode: textColor(),
       blue: '#0b8df0',
       gray100: '#F8FAFC',
@@ -189,7 +176,6 @@ const DefaultPalette = (mode: any, skin: any, themeColor: any) => {
       bgThree: '#00E5AB',
       bgFour: '#3B82F6',
       bgFive: '#CCFAEE',
-      card: cardBgColor(),
     },
     action: {
       active: `rgba(${mainColor}, 0.54)`,

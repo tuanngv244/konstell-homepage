@@ -28,7 +28,7 @@ export function SolutionsSchema({
     additionalType,
     provider: {
       '@type': 'Organization',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
       url: 'https://winway-system.com',
       logo: {
         '@type': 'ImageObject',
@@ -74,7 +74,7 @@ export function SolutionsSchema({
     },
     brand: {
       '@type': 'Brand',
-      name: 'Winways Inc.',
+      name: 'Konstell Inc.',
     },
     audience: {
       '@type': 'BusinessAudience',
