@@ -1,8 +1,10 @@
 import React, { FunctionComponent, SVGProps } from 'react';
 
-type Props = { size?: number } & SVGProps<SVGSVGElement>;
+type Props = { size?: number } & SVGProps<SVGSVGElement> & {
+  pathProps?: SVGProps<SVGPathElement>;
+}
 
-const ArrowRightUp: FunctionComponent<Props> = ({ size, ...props }) => {
+const ArrowRightUp: FunctionComponent<Props> = ({ size, pathProps, ...props }) => {
   return (
     <svg
       width={size}
@@ -18,6 +20,7 @@ const ArrowRightUp: FunctionComponent<Props> = ({ size, ...props }) => {
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"
+        {...pathProps}
       />
     </svg>
   );

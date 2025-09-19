@@ -17,9 +17,9 @@ type Props = {
 type LangTypes = 'kr' | 'en' | 'vi';
 
 const labels = {
-  // vi: {
-  //   title: 'VI',
-  // },
+  vi: {
+    title: 'VI',
+  },
   kr: {
     title: 'KR',
   },

@@ -34,6 +34,9 @@ module.exports = {
         nd: {
           600: '#6f77da',
         },
+        gradient: {
+          "primary": "bg-[linear-gradient(103deg,rgba(36,76,255,1)_0%,rgba(66,129,255,1)_100%)"
+        },
         primary: {
           200: '#97B4FF',
           400: '#4281FF',

@@ -65,11 +65,13 @@ import Install from './Install';
 import MonitorCheck from './MonitorCheck';
 import PhoneOutGoing from './PhoneOutGoing';
 import Settings from './Settings';
+import Play from './Play';
 
 export const HeroIcons = {
   ArrowTrendingUp,
   ArrowRight,
   ChevronLeft,
+  Play,
   Fax,
   ChevronRight,
   ChevronDown,

@@ -124,16 +124,16 @@ const LAppBar = (props: LAppBarProps) => {
         <Link href={'#'} passHref>
           <Button
             className={clsx(
-              'talk-btn rounded-tr-md shadow-none flex items-center gap-[0_0.5rem] whitespace-nowrap mt-[1rem] w-full !text-[1rem] transition-all duration-300 ease-in-out !normal-case',
+              'talk-btn rounded-tr-md shadow-none flex items-center gap-[0_0.5rem] whitespace-nowrap mt-[1rem] w-full !text-[1rem] transition-all duration-300 ease-in-out !normal-case bg-gradient-primary',
               {
-                '!bg-primary !text-white': activeScroll,
-                '!bg-white !text-black': !activeScroll,
+                // '!bg-primary !text-white': activeScroll,
+                // '!bg-white !text-black': !activeScroll,
               },
             )}
             variant="contained"
           >
-            {t('button.talkToAnExpert')}
-            <HeroIcons.ArrowRightUp size={14} />
+            {t('button.contactUs')}
+            {/* <HeroIcons.ArrowRightUp size={14} /> */}
           </Button>
         </Link>
       </div>
