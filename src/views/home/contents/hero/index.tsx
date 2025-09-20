@@ -1,4 +1,5 @@
 'use client';
+import ButtonLink from '@/@core/components/button-link';
 import { HeroIcons } from '@/@core/components/icons/heroIcons';
 import MainWrapper from '@/@core/components/shared/sections/main-wrapper';
 import { delayTime } from '@/@core/utils/general';
@@ -84,7 +85,7 @@ const HeroSection = ({ }: Props) => {
       <div className="hero-bg absolute overflow-hidden top-0 left-0 w-full h-screen animate-translateY">
         <video
           src="/videos/video-bg.mp4"
-          controls
+          controls={false}
           autoPlay
           loop
           muted
@@ -97,7 +98,7 @@ const HeroSection = ({ }: Props) => {
       <div className="w-full absolute top-[100px] left-1/2 transform  -translate-x-1/2  z-[3] ">
         <MainWrapper isFullContainer nameClass='flex items-center justify-between'>
           <div className="flex items-center gap-3">
-            <Button className='w-[2.5rem] h-[2.5rem]  !bg-transparent !rounded-full !border !border-primary-400 !border-solid'>
+            <Button className='w-[2.5rem] h-[2.5rem]  hover:rotate-[135deg] hover:transition-transform transition-transform !bg-transparent !rounded-full !border !border-primary-400 !border-solid'>
               <HeroIcons.Play size={10} pathProps={{
                 stroke: 'white'
               }} />
@@ -115,28 +116,23 @@ const HeroSection = ({ }: Props) => {
         </MainWrapper>
       </div>
 
-      <div className="xs:w-full sm:!w-auto xs:max-w-full sm:!max-w-[800px] hero-intro absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[3] flex xs:flex-col sm:!flex-row xs:items-start sm:!items-end xs:justify-start sm:!justify-end px-4 xs:gap-8 sm:gap-0">
+      <div className="xs:w-full sm:!w-auto xs:max-w-full md:min-w-[800px] sm:!max-w-[800px] hero-intro absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[3] flex xs:flex-col sm:!flex-row xs:items-center sm:!items-end xs:justify-start sm:!justify-end px-4 xs:gap-8 sm:gap-0">
         <div>
           <h1
             // ref={titleRef}
-            className=" hero-title xs:text-[2.25rem] sm:!text-[4rem]   leading-[6rem] font-medium text-white md:text-[4rem] sm:!leading-[5rem]  xs:leading-[3.5rem] [320px_to_375px]:text-[2rem] [320px_to_375px]:leading-[3.25rem]"
+            className=" hero-title xs:text-center sm:!text-left xs:text-[2.5rem] sm:!text-[4rem]   leading-[6rem] font-medium text-white md:text-[4rem] sm:!leading-[5rem]  xs:leading-[3.5rem] [320px_to_375px]:text-[2rem] [320px_to_375px]:leading-[3.25rem]"
           >
             Software Delivery
             Driving Business
             Growth
           </h1>
-          <h6 className='mt-[0.875rem] font-normal md:text-[1.125rem] text-white leading-[0.875rem]'>Partner with dedicated IT experts who ‘get’ your business</h6>
+          <h6 className='mt-[0.875rem] font-normal md:text-[1.125rem] text-white sm:leading-[0.875rem] md:!leading-[1.75rem]'>Partner with dedicated IT experts who ‘get’ your business</h6>
         </div>
 
-        <Button
-          className=" !rounded-full xs:min-w-[7rem]  sm:!min-w-[10rem] xs:w-[7rem] sm:!w-[10rem] xs:h-[7rem] sm:!h-[10rem] flex flex-col xs:gap-1 sm:!gap-4 bg-gradient-primary"
-          variant="contained"
-        >
-          <HeroIcons.ArrowRightUp size={16} pathProps={{
+        {/* <HeroIcons.ArrowRightUp size={16} pathProps={{
             stroke: 'white'
-          }} />
-          {t('button.getStarted')}
-        </Button>
+          }} /> */}
+        <ButtonLink cls='!rounded-full xs:min-w-[8rem] sm:!min-w-[10rem] xs:w-[8rem] sm:!w-[10rem] xs:h-[8rem] sm:!h-[10rem] flex  flex-col-reverse items-center justify-center xs:gap-1 sm:!gap-4  gradient-primary uppercase text-[0.875rem]' name={t('button.getStarted')} link="#" direction='LTR' size={18} color='#fff' />
 
 
       </div>

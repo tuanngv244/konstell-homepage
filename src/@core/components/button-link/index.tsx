@@ -12,6 +12,7 @@ type Props = {
   sxProps?: SxProps;
   direction?: 'LTR' | 'RTL'; // left to right | right to left
   size?: number;
+  cls?: string
 };
 
 const ButtonLink: React.FC<Props> = ({
@@ -22,10 +23,11 @@ const ButtonLink: React.FC<Props> = ({
   sxProps,
   direction = 'LTR',
   size,
+  cls
 }) => {
   return (
     <BoxLink
-      className={clsx('link', { 'to-left': direction === 'RTL' })}
+      className={clsx('link', { 'to-left': direction === 'RTL', }, cls)}
       href={link}
       style={
         {
@@ -68,9 +70,15 @@ const BoxLink = styled(Link)(({ theme }) => {
     alignItems: 'center',
     gap: '10px',
     color: 'var(--clr)',
+    '&.gradient-primary': {
+      background: 'linear-gradient(103deg, rgba(36, 76, 255, 1) 0%, rgba(66, 129, 255, 1) 100%)'
+    },
     '.box-icon': {
       svg: {
         color: 'var(--clr) !important',
+        path: {
+          fill: 'var(--clr) !important',
+        }
       },
     },
     '&:hover': {

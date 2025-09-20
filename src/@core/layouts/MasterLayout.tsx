@@ -7,6 +7,7 @@ import Lenis from 'lenis'
 import { useTitle } from '../hooks/useTitle';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
+import { useDevice } from '../hooks/useDevice';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +23,7 @@ type LayoutProps = {
 const MasterLayout = (props: LayoutProps) => {
   useTitle();
   const { children } = props;
-
+  const { mobile, tablet } = useDevice()
 
 
   useEffect(() => {
@@ -40,10 +41,10 @@ const MasterLayout = (props: LayoutProps) => {
   return (
     <>
       <div className="xs:block mid-large:!hidden xl:!hidden">
-        <VerticalLayout {...props}>{children}</VerticalLayout>
+        {(mobile || tablet) && <VerticalLayout {...props}>{children}</VerticalLayout>}
       </div>
       <div className="xs:hidden mid-large:!block xl:!block">
-        <HorizontalLayout {...props}>{children}</HorizontalLayout>
+        {(!mobile && !tablet) && <HorizontalLayout {...props}>{children}</HorizontalLayout>}
       </div>
     </>
   );

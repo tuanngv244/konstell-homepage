@@ -21,6 +21,7 @@ module.exports = {
           max: '1290px',
         },
       },
+
       colors: {
         grey: {
           50: '#f6f6f6',
@@ -40,6 +41,7 @@ module.exports = {
         primary: {
           200: '#97B4FF',
           400: '#4281FF',
+          500: '#4E6FF3',
           600: '#244CFF',
         },
         gray: {
@@ -47,9 +49,13 @@ module.exports = {
           100: '#F8FAFC',
           200: '#E2E2E2',
           400: '#AFAFAF',
+          600: "#666666",
           800: '#1F1F1F',
           900: '#141414',
         },
+      },
+      backgroundImage: {
+        'gradient-primary': "linear-gradient(103deg, rgba(36,76,255,1) 0%, rgba(66,129,255,1) 100%)",
       },
       animation: {
         shine: 'shine 1s',

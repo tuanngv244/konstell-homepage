@@ -13,6 +13,9 @@
   --grey-color-900: #141414;
   --two-nd-color: #6f77da;
   --primary-color: #244CFF;
+
+  --black-color:#000;
+  --white-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -48,6 +51,7 @@ body {
 body {
   overflow-x: hidden;
   font-family: var(--helvetica-font);
+  background-color:  transparent !important;
 }
 
 ::-webkit-scrollbar {
@@ -80,7 +84,7 @@ a.hover-line {
     bottom: -2px;
     width: 0%;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--clr, #fff);
     transition: all 0.25s;
   }
   &:hover {
@@ -110,13 +114,33 @@ a.hover-line {
 }
 
 .section-title {
-  font-size: 2.5rem;
-  line-height: 3rem;
-  color: var(--grey-color-900);
+  font-size: 4.5rem;
+  line-height: 4.75rem;
+  color: var(--white-color);
   font-weight: 500;
-
   span {
     color: var(--two-nd-color);
+  }
+}
+
+.section-subtitle{
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--black-color);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0 0.875rem;
+  &::before{
+    content: '';
+    display: block;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--black-color);
+    border-radius: 0.25rem;
   }
 }
 
@@ -127,11 +151,19 @@ a.hover-line {
   font-weight: 400;
 }
 
+.text-gradient {
+  background: linear-gradient(90deg,rgba(36,76,255,1) 0%,rgba(66,129,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 /* sm: ≥ 320px */
 @media (min-width: 320px) and (max-width: 639px) {
   /* Your styles here */
   .section-title {
-    font-size: 1.75rem !important;
+    font-size: 2rem !important;
     line-height: 2.25rem !important;
   }
   .section-desc {
@@ -144,7 +176,7 @@ a.hover-line {
 @media (min-width: 640px) and (max-width: 767px) {
   /* Your styles here */
   .section-title {
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 2.25rem;
   }
   .section-desc {
@@ -156,16 +188,28 @@ a.hover-line {
 /* md: ≥ 768px */
 @media (min-width: 768px) and (max-width: 1023px) {
   /* Your styles here */
+      .section-title {
+    font-size: 3rem !important;
+    line-height: 3rem !important;
+  }
 }
 
 /* lg: ≥ 1024px */
 @media (min-width: 1024px) and (max-width: 1279px) {
   /* Your styles here */
+    .section-title {
+    font-size: 3.25rem !important;
+    line-height: 3.25rem !important;
+  }
 }
 
 /* xl: ≥ 1280px */
 @media (min-width: 1280px) and (max-width: 1535px) {
   /* Your styles here */
+      .section-title {
+    font-size: 3.5rem !important;
+    line-height: 3.5rem !important;
+  }
 }
 
 /* 2xl: ≥ 1536px */
