@@ -7,6 +7,8 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import gsap from 'gsap';
 import ButtonLink from '@/@core/components/button-link';
+import Model3D from '@/@core/components/3d';
+import { HandModel } from '@/@core/components/3d/models/HandModel';
 
 type Props = {}
 
@@ -88,30 +90,32 @@ const ServiceSection: React.FC<Props> = ({ }) => {
         const desc = serviceItem.querySelector('.desc') as HTMLElement;
         const link = serviceItem.querySelector('.link') as HTMLElement;
         const tl = gsap.timeline();
+        const tl2 = gsap.timeline();
         tl.fromTo(offs, {
             opacity: 0,
-            x: 20,
+            x: (i) => 20 + i * 10,
         }, {
             opacity: 1,
             x: 0,
             stagger: 0.1,
         }).fromTo(svcs, {
             opacity: 0,
-            x: 20,
+            x: (i) => 20 + i * 10,
         }, {
             opacity: 1,
             x: 0,
             stagger: 0.1,
-        }, '-=0.5').fromTo(desc, {
+        }, '-=0.5');
+        tl2.fromTo(desc, {
             opacity: 0,
-            x: 10,
-            duration: 0.3
+            x: 30,
         }, {
             opacity: 1,
             x: 0,
+            duration: 0.5
         }).fromTo(link, {
             opacity: 0,
-            x: 10,
+            x: 20,
             duration: 0.3
         }, {
             opacity: 1,
@@ -120,6 +124,17 @@ const ServiceSection: React.FC<Props> = ({ }) => {
 
     }
 
+    const rotates = {
+        [-1]: [1.8, 3.5, -0.2],
+        0: [1.6, 3.7, -0.2],
+        1: [1.6, 3.5, -0.1],
+        2: [1.6, 3.4, 0.1],
+        3: [1.6, 3.1, 0],
+        4: [1.8, 2.7, 0],
+        5: [1.8, 2.4, 0],
+    }
+
+
 
     return (
         <div className="service-section bg-white xs:py-[3rem] sm:py-[5rem] xl:!py-[10rem]">
@@ -127,11 +142,18 @@ const ServiceSection: React.FC<Props> = ({ }) => {
                 <h3 className="section-subtitle mb-[1rem]">
                     Our Expertise
                 </h3>
-                <div className="inner flex xs:flex-col sm:!flex-row items-start xs:gap-y-4 sm:!gap-y-0 xs:gap-x-0 sm:!gap-x-4">
-                    <div className="inner__left flex-[2]">
-                        <img src="/images/pages/home/service-img.png" />
+                <div className="inner flex xs:flex-col sm:!flex-row items-stretch xs:gap-y-4 sm:!gap-y-0 xs:gap-x-0 sm:!gap-x-4 xs:h-full  lg:!h-[768px] 3xl:!h-[840px] ">
+                    <div className="inner__left xs:hidden lg:!block flex-1 max-w-[50%] min-h-full xs:h-[500px] lg:!h-full">
+                        <Model3D >
+                            {() => (
+                                <HandModel
+                                    rotation={rotates[activeIndex as keyof typeof rotates]}
+                                    scale={[0.6, 0.6, 0.6]}
+                                />
+                            )}
+                        </Model3D>
                     </div>
-                    <div className="inner__right flex-[3]">
+                    <div className="inner__right flex-1 h-full">
                         <ul className="flex flex-col xs:gap-4 sm:!gap-8">
                             {
                                 data.map(({ name, offices, services, desc, link }, index) => (
@@ -142,20 +164,20 @@ const ServiceSection: React.FC<Props> = ({ }) => {
                                             {index < 9 ? `0${index + 1}` : index + 1}/
                                         </p>
                                         <div className="flex flex-col gap-2">
-                                            <h5 className={clsx('xs:text-[2rem] sm:!text-[3rem] xl:!text-[3.75rem] xs:leading-[2.5rem] sm:leading-[3.25rem] xl:!leading-[3.75rem] font-[700] text-black transition-all cursor-pointer user-select-none ', {
+                                            <h5 className={clsx('xs:text-[2rem] sm:!text-[2.75rem] xl:!text-[3.25rem] xs:leading-[2.5rem] sm:leading-[3.25rem] xl:!leading-[3.75rem] font-[700] text-black transition-all cursor-pointer user-select-none ', {
                                                 'text-gradient': activeIndex === index,
                                             })} onClick={() => onActiveItem(index)}>{name}</h5>
                                             <div className={clsx(' content overflow-hidden flex flex-col  gap-4 h-0 transition-all duration-300', {
-                                                'xs:h-[250px] sm:!h-[200px]': activeIndex === index,
+                                                'xs:h-[350px] lg:!h-[300px]  xl:!h-[200px]': activeIndex === index,
                                             })}>
                                                 <div className="tags flex items-center gap-2">
                                                     {offices.map((office, idx) => (
-                                                        <div key={idx} className="tags__item office min-h-[2.5rem] text-[0.875rem] leading-[1rem] uppercase text-white py-[0.75rem] px-[1.5rem] rounded-[2.5rem] bg-gradient-primary flex items-center justify-center">{office}</div>
+                                                        <div key={idx} className="tags__item office min-h-[2.5rem] xs:text-[0.75rem] sm:!text-[0.875rem] leading-[1rem] uppercase text-white py-[0.75rem] px-[1.5rem] rounded-[2.5rem] bg-gradient-primary flex items-center justify-center">{office}</div>
                                                     ))}
                                                 </div>
                                                 <div className="tags flex items-center gap-2 flex-wrap">
                                                     {services.map((service, idx) => (
-                                                        <div key={idx} className="tags__item service min-h-[2.5rem] flex items-center justify-center text-[0.875rem] leading-[1rem] uppercase text-black py-[0.5rem] px-[0.75rem] rounded-[2.5rem] bg-white border font-medium border-solid border-gray-500">{service}</div>
+                                                        <div key={idx} className="tags__item service min-h-[2.5rem] flex items-center justify-center xs:text-[0.75rem] sm:!text-[0.875rem]  leading-[1rem] uppercase text-black py-[0.5rem] px-[0.75rem] rounded-[2.5rem] bg-white border font-medium border-solid border-gray-500">{service}</div>
                                                     ))}
                                                 </div>
                                                 <div className="desc xs:max-w-full sm:!max-w-[80%] text-[1rem] leading-[1.25rem] text-gray-600 font-[400]">

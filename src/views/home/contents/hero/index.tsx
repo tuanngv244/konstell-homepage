@@ -126,7 +126,7 @@ const HeroSection = ({ }: Props) => {
             Driving Business
             Growth
           </h1>
-          <h6 className='mt-[0.875rem] font-normal md:text-[1.125rem] text-white sm:leading-[0.875rem] md:!leading-[1.75rem]'>Partner with dedicated IT experts who ‘get’ your business</h6>
+          <h6 className='mt-[0.875rem] xs:text-center sm:!text-left font-normal md:text-[1.125rem] text-white sm:leading-[0.875rem] md:!leading-[1.75rem]'>Partner with dedicated IT experts who ‘get’ your business</h6>
         </div>
 
         {/* <HeroIcons.ArrowRightUp size={16} pathProps={{

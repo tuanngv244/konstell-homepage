@@ -2,6 +2,7 @@ import AboutSection from './contents/about';
 import BranchSection from './contents/branch';
 import CaseStudiesSection from './contents/case-studies';
 import ContactSection from './contents/contact';
+import DigitalTransformSection from './contents/digital-transform';
 import HeroSection from './contents/hero';
 import PlatformSection from './contents/platform';
 import ServiceSection from './contents/service';
@@ -15,6 +16,7 @@ const HomePage = () => {
       <ServiceSection />
       <CaseStudiesSection />
       <WhyChooseUsSection />
+      <DigitalTransformSection />
     </div>
   );
 };

@@ -110,7 +110,7 @@ const CaseStudiesSection: React.FC<Props> = ({ }) => {
 
                 {/* Case Studies Cards */}
                 <div className="xs:mt-8 sm:!mt-16">
-                    <div className="grid gap-8">
+                    <div className="grid xs:gap-8 md:!gap-12">
                         {caseStudies.map((caseStudy, index) => (
                             <Card key={index} data={caseStudy} />
                         ))}
