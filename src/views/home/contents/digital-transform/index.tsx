@@ -44,7 +44,7 @@ const DigitalTransformSection: React.FC<Props> = ({ }) => {
                         <h2 className="xs:text-[2.5rem] sm:text-[3rem] lg:text-[3.5rem] xl:text-[4rem] font-bold leading-tight text-white mb-8">
                             Digital transformation for industries
                         </h2>
-                        
+
                         <p className="text-gray-300 text-lg leading-relaxed mb-8 max-w-md">
                             STV is your one-stop software development company, offering a full range of services for all industries. We drive your business progress with smart tech decisions tailored to a specific field.
                         </p>
@@ -88,7 +88,7 @@ const DigitalTransformSection: React.FC<Props> = ({ }) => {
                                             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                                                 {industry.title}
                                             </h3>
-                                            
+
                                             <p className="text-gray-400 text-sm leading-relaxed mb-4 line-clamp-3">
                                                 {industry.description}
                                             </p>
