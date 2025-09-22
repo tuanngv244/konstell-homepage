@@ -30,7 +30,7 @@ const Card: React.FC<Props> = ({ data }) => {
                         name="VIEW CASE STUDY"
                         link={link}
                         color="#ffffff"
-                        size={16}
+                        size={20}
                     />
                 </div>
             </div>

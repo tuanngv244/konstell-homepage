@@ -22,7 +22,7 @@ const HeroSection = ({ }: Props) => {
   const titleRef = useRef<HTMLHeadingElement | null>(null);
 
   const _onScrollNextSection = () => {
-    const ele = document.getElementById('about')
+    const ele = document.getElementById('service-section');
 
     // Get element position
     const elementPosition = ele.getBoundingClientRect().top + window.pageYOffset;
@@ -116,23 +116,23 @@ const HeroSection = ({ }: Props) => {
         </MainWrapper>
       </div>
 
-      <div className="xs:w-full sm:!w-auto xs:max-w-full md:min-w-[800px] sm:!max-w-[800px] hero-intro absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[3] flex xs:flex-col sm:!flex-row xs:items-center sm:!items-end xs:justify-start sm:!justify-end px-4 xs:gap-8 sm:gap-0">
+      <div className="xs:w-full sm:!w-auto xs:max-w-full xs:min-w-[90%] md:!min-w-[800px] sm:!max-w-[800px] hero-intro absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[3] flex xs:flex-col md:!flex-row xs:items-center md:!items-end xs:justify-start sm:!justify-end px-4 xs:gap-8 sm:gap-0">
         <div>
           <h1
             // ref={titleRef}
-            className=" hero-title xs:text-center sm:!text-left xs:text-[2.5rem] sm:!text-[4rem]   leading-[6rem] font-medium text-white md:text-[4rem] sm:!leading-[5rem]  xs:leading-[3.5rem] [320px_to_375px]:text-[2rem] [320px_to_375px]:leading-[3.25rem]"
+            className=" hero-title xs:text-center md:!text-left xs:text-[2.5rem] sm:!text-[4rem]   leading-[6rem] font-medium text-white md:text-[4rem] sm:!leading-[5rem]  xs:leading-[3.5rem] [320px_to_375px]:text-[2rem] [320px_to_375px]:leading-[3.25rem]"
           >
             Software Delivery
             Driving Business
             Growth
           </h1>
-          <h6 className='mt-[0.875rem] xs:text-center sm:!text-left font-normal md:text-[1.125rem] text-white sm:leading-[0.875rem] md:!leading-[1.75rem]'>Partner with dedicated IT experts who ‘get’ your business</h6>
+          <h6 className='mt-[0.875rem] xs:text-center md:!text-left font-normal md:text-[1.125rem] text-white sm:leading-[1rem] md:!leading-[1.75rem]'>Partner with dedicated IT experts who ‘get’ your business</h6>
         </div>
 
         {/* <HeroIcons.ArrowRightUp size={16} pathProps={{
             stroke: 'white'
           }} /> */}
-        <ButtonLink cls='!rounded-full xs:min-w-[8rem] sm:!min-w-[10rem] xs:w-[8rem] sm:!w-[10rem] xs:h-[8rem] sm:!h-[10rem] flex  flex-col-reverse items-center justify-center xs:gap-1 sm:!gap-4  gradient-primary uppercase text-[0.875rem]' name={t('button.getStarted')} link="#" direction='LTR' size={18} color='#fff' />
+        <ButtonLink cls='!rounded-full xs:min-w-[8rem] md:!min-w-[10rem] xs:w-[8rem] md:!w-[10rem] xs:h-[8rem] md:!h-[10rem] flex flex-col-reverse items-center justify-center xs:gap-1 sm:!gap-3 gradient-primary uppercase text-[0.875rem]' name={t('button.getStarted')} link="#" direction='LTR' size={28} color='#fff' />
 
 
       </div>

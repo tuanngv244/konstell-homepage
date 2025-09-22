@@ -117,9 +117,12 @@ a.hover-line {
   font-size: 4.5rem;
   line-height: 4.75rem;
   color: var(--white-color);
-  font-weight: 500;
+  font-weight: 700;
   span {
     color: var(--two-nd-color);
+  }
+  &.same-line-height{
+    line-height: 4.5rem;
   }
 }
 
@@ -137,6 +140,7 @@ a.hover-line {
     content: '';
     display: block;
     width: 0.5rem;
+    min-width: 0.5rem;
     height: 0.5rem;
     border-radius: 50%;
     background-color: var(--black-color);
@@ -169,6 +173,9 @@ a.hover-line {
   .section-desc {
     font-size: 1rem;
     line-height: 1.25rem;
+  }
+  .section-subtitle{
+    font-size: 0.75rem !important;
   }
 }
 
@@ -218,3 +225,10 @@ a.hover-line {
 }
 
 
+
+
+.insights-splider{
+  .splide__track{
+    overflow: initial !important;
+  }
+}

@@ -66,6 +66,7 @@ import MonitorCheck from './MonitorCheck';
 import PhoneOutGoing from './PhoneOutGoing';
 import Settings from './Settings';
 import Play from './Play';
+import QuotationMarks from './QuotationMarks';
 
 export const HeroIcons = {
   ArrowTrendingUp,
@@ -129,7 +130,7 @@ export const HeroIcons = {
   FastForward,
   MonitorCog,
   User,
-
+  QuotationMarks,
   Calculation,
   BankNote,
   Install,

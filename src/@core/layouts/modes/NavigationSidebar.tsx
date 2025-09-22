@@ -10,6 +10,7 @@ import { hexToRGBA } from '@/@core/utils/hex-to-rgba';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import ButtonLink from '@/@core/components/button-link';
 
 type Props = {
   open: boolean;
@@ -139,14 +140,13 @@ const NavigationSidebar = ({ open, toggleSidebar }: Props) => {
       className={clsx({ active: open, 'is-mobile': device.mobile || device.tablet })}
     >
       {renderNavContent()}
-      <Link href={'#'} passHref>
-        <Button
-          className="rounded-tr-md shadow-none whitespace-nowrap mt-[1rem] w-full text-[1rem]"
-          variant="contained"
-        >
-          {t('button.talkToAnExpert')}
-        </Button>
-      </Link>
+      <ButtonLink
+        cls="inline-flex xs:mt-[1rem] items-center gap-2 xs:px-4 md:!px-6 xs:py-2 md:!py-3 bg-gradient-primary text-white text-sm font-medium tracking-wider rounded-full transition-all duration-300"
+        name="CONTACT US"
+        link="#"
+        color="#ffffff"
+        size={20}
+      />
     </WrapContent>
   );
 };

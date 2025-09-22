@@ -137,14 +137,14 @@ const ServiceSection: React.FC<Props> = ({ }) => {
 
 
     return (
-        <div className="service-section bg-white xs:py-[3rem] sm:py-[5rem] xl:!py-[10rem]">
+        <div className="service-section bg-white xs:py-[3rem] sm:py-[5rem] xl:!pt-[10rem] xl:!pb-[5rem]" id="service-section">
             <MainWrapper>
-                <h3 className="section-subtitle mb-[1rem]">
+                <h3 className="section-subtitle xs:mb-[1.5rem] lg:!mb-[1rem]">
                     Our Expertise
                 </h3>
-                <div className="inner flex xs:flex-col sm:!flex-row items-stretch xs:gap-y-4 sm:!gap-y-0 xs:gap-x-0 sm:!gap-x-4 xs:h-full  lg:!h-[768px] 3xl:!h-[840px] ">
+                <div className="inner flex xs:flex-col lg:!flex-row items-stretch xs:gap-y-4 sm:!gap-y-0 xs:gap-x-0 sm:!gap-x-4 xs:h-full  lg:!h-[768px] 3xl:!h-[800px] ">
                     <div className="inner__left xs:hidden lg:!block flex-1 max-w-[50%] min-h-full xs:h-[500px] lg:!h-full">
-                        <Model3D >
+                        <Model3D>
                             {() => (
                                 <HandModel
                                     rotation={rotates[activeIndex as keyof typeof rotates]}
@@ -153,7 +153,7 @@ const ServiceSection: React.FC<Props> = ({ }) => {
                             )}
                         </Model3D>
                     </div>
-                    <div className="inner__right flex-1 h-full">
+                    <div className="inner__right sm:ml-[3rem] lg:!ml-0 flex-1 h-full">
                         <ul className="flex flex-col xs:gap-4 sm:!gap-8">
                             {
                                 data.map(({ name, offices, services, desc, link }, index) => (
@@ -168,11 +168,11 @@ const ServiceSection: React.FC<Props> = ({ }) => {
                                                 'text-gradient': activeIndex === index,
                                             })} onClick={() => onActiveItem(index)}>{name}</h5>
                                             <div className={clsx(' content overflow-hidden flex flex-col  gap-4 h-0 transition-all duration-300', {
-                                                'xs:h-[350px] lg:!h-[300px]  xl:!h-[200px]': activeIndex === index,
+                                                'xs:h-[350px] sm:!h-[200px]  lg:!h-[300px]  xl:!h-[200px]': activeIndex === index,
                                             })}>
                                                 <div className="tags flex items-center gap-2">
                                                     {offices.map((office, idx) => (
-                                                        <div key={idx} className="tags__item office min-h-[2.5rem] xs:text-[0.75rem] sm:!text-[0.875rem] leading-[1rem] uppercase text-white py-[0.75rem] px-[1.5rem] rounded-[2.5rem] bg-gradient-primary flex items-center justify-center">{office}</div>
+                                                        <div key={idx} className="tags__item office min-h-[2.5rem] xs:text-[0.75rem] sm:!text-[0.875rem] leading-[1rem] uppercase text-white py-[0.75rem] xs:px-[0.875rem] lg:!px-[1.5rem] rounded-[2.5rem] bg-gradient-primary flex items-center justify-center">{office}</div>
                                                     ))}
                                                 </div>
                                                 <div className="tags flex items-center gap-2 flex-wrap">
@@ -183,7 +183,7 @@ const ServiceSection: React.FC<Props> = ({ }) => {
                                                 <div className="desc xs:max-w-full sm:!max-w-[80%] text-[1rem] leading-[1.25rem] text-gray-600 font-[400]">
                                                     {desc}
                                                 </div>
-                                                <ButtonLink cls="mt-[0.625rem] text-[0.875rem] leading-[1rem] uppercase font-[500] text-black relative hover-line" name='Learn More' link={link} color='#000000' size={16} />
+                                                <ButtonLink cls="mt-[0.625rem] text-[0.875rem] leading-[1rem] uppercase font-[500] text-black relative hover-line" name='Learn More' link={link} color='#000000' size={20} />
                                             </div>
                                         </div>
                                     </li>

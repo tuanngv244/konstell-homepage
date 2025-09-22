@@ -7,6 +7,7 @@ import LogoMain from '../../icons/LogoMain';
 import clsx from 'clsx';
 import ConfigLanguage from '../../shared/sections/config-language';
 import { HeroIcons } from '../../icons/heroIcons';
+import ButtonLink from '../../button-link';
 
 const StyleLogo = styled('div')(({ theme }) => ({
   display: 'flex',
@@ -121,21 +122,13 @@ const LAppBar = (props: LAppBarProps) => {
       {children}
       <div className="flex items-center gap-[0_2rem] ml-[1rem]">
         <ConfigLanguage activeScroll={activeScroll} />
-        <Link href={'#'} passHref>
-          <Button
-            className={clsx(
-              'talk-btn rounded-tr-md shadow-none flex items-center gap-[0_0.5rem] whitespace-nowrap mt-[1rem] w-full !text-[1rem] transition-all duration-300 ease-in-out !normal-case bg-gradient-primary',
-              {
-                // '!bg-primary !text-white': activeScroll,
-                // '!bg-white !text-black': !activeScroll,
-              },
-            )}
-            variant="contained"
-          >
-            {t('button.contactUs')}
-            {/* <HeroIcons.ArrowRightUp size={14} /> */}
-          </Button>
-        </Link>
+        <ButtonLink
+          cls="inline-flex items-center gap-2 xs:px-4 md:!px-6 xs:py-2 md:!py-3 bg-gradient-primary text-white text-md font-medium tracking-wider rounded-full transition-all duration-300"
+          name="Contact Us"
+          link="#"
+          color="#ffffff"
+          size={20}
+        />
       </div>
     </AppBarWrapper>
   );

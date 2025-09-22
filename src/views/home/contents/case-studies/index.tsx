@@ -67,8 +67,7 @@ const CaseStudiesSection: React.FC<Props> = ({ }) => {
                 <div className="flex xs:flex-col sm:!flex-row items-start justify-between xs:mb-4 sm:!mb-8">
                     <div className="flex-1">
                         <div className="flex items-center gap-2 mb-4">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                            <span className="text-sm font-medium tracking-wider">CASE STUDIES</span>
+                            <h3 className="section-subtitle tracking-wider before:!bg-white !text-white">CASE STUDIES</h3>
                         </div>
                         <h2 className="section-title">
                             Case Studies
@@ -98,11 +97,11 @@ const CaseStudiesSection: React.FC<Props> = ({ }) => {
                         </div>
                         <div className="xs:mt-2 sm:!mt-4">
                             <ButtonLink
-                                cls="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-white text-sm font-medium tracking-wider rounded-full transition-all  duration-300"
+                                cls="inline-flex items-center gap-2  xs:px-4 md:!px-6 xs:py-2 md:!py-3 bg-gradient-primary text-white text-sm font-medium tracking-wider rounded-full transition-all  duration-300"
                                 name='ALL CASES'
                                 link="/case-studies"
                                 color='#ffffff'
-                                size={16}
+                                size={20}
                             />
                         </div>
                     </div>

@@ -35,9 +35,6 @@ module.exports = {
         nd: {
           600: '#6f77da',
         },
-        gradient: {
-          "primary": "bg-[linear-gradient(103deg,rgba(36,76,255,1)_0%,rgba(66,129,255,1)_100%)"
-        },
         primary: {
           200: '#97B4FF',
           400: '#4281FF',
@@ -48,14 +45,17 @@ module.exports = {
           50: '#f6f6f6',
           100: '#F8FAFC',
           200: '#E2E2E2',
+          300: '#f3f3f3',
           400: '#AFAFAF',
           600: "#666666",
+          700: '#999A9A',
           800: '#1F1F1F',
           900: '#141414',
         },
       },
       backgroundImage: {
         'gradient-primary': "linear-gradient(103deg, rgba(36,76,255,1) 0%, rgba(66,129,255,1) 100%)",
+        "footer-primary": "radial-gradient(93.8% 100% at 49.17% 0%, rgba(0, 0, 0, 0.00) 62.73%, rgba(0, 111, 244, 0.50) 100%)"
       },
       animation: {
         shine: 'shine 1s',
@@ -67,5 +67,12 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // function ({ addUtilities }) {
+    //   addUtilities({
+    //     '.content-empty': { content: '""' },
+    //     '.content-[""]': { content: '""' },
+    //   })
+    // },
+  ],
 };
