@@ -34,8 +34,8 @@ const ButtonLink: React.FC<Props> = ({
         <BoxIcon
           className="box-icon"
           sx={{
-            width: size,
-            height: size,
+            width: size - 4,
+            height: size - 4,
           }}
         >
           <HeroIcons.ArrowRight className="show" size={size || 16} />

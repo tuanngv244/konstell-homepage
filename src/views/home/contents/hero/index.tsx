@@ -140,11 +140,11 @@ const HeroSection = ({}: Props) => {
             stroke: 'white'
           }} /> */}
         <ButtonLink
-          cls="!rounded-full xs:min-w-[8rem] md:!min-w-[10rem] xs:w-[8rem] md:!w-[10rem] xs:h-[8rem] md:!h-[10rem] flex flex-col-reverse items-center justify-center xs:gap-1 sm:!gap-3 gradient-primary uppercase text-[0.875rem]"
+          cls="!rounded-full xs:min-w-[8rem] md:!min-w-[10rem] xs:w-[8rem] md:!w-[10rem] xs:h-[8rem] hover:!scale-[0.9] transition-all  md:!h-[10rem] flex flex-col-reverse items-center justify-center xs:gap-1 sm:!gap-3 gradient-primary uppercase text-[0.875rem]"
           name={t('button.getStarted')}
           link="#"
           direction="LTR"
-          size={28}
+          size={40}
           color="#fff"
         />
       </div>
