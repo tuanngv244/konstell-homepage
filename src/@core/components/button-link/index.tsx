@@ -12,9 +12,9 @@ type Props = {
   sxProps?: SxProps;
   direction?: 'LTR' | 'RTL'; // left to right | right to left
   size?: number;
-  cls?: string
-  type?: 'button' | 'submit' | 'link'
-}
+  cls?: string;
+  type?: 'button' | 'submit' | 'link';
+};
 
 const ButtonLink: React.FC<Props> = ({
   name,
@@ -27,33 +27,33 @@ const ButtonLink: React.FC<Props> = ({
   cls,
   type = 'link',
 }) => {
-
-  const content = direction === 'LTR' ? (
-    <>
-      {name}
-      <BoxIcon
-        className="box-icon"
-        sx={{
-          width: size,
-          height: size,
-        }}
-      >
-        <HeroIcons.ArrowRight className="show" size={size || 16} />
-        <HeroIcons.ArrowRight className="hide" size={size || 16} />
-      </BoxIcon>
-    </>
-  ) : (
-    <>
-      <BoxIcon className={clsx('box-icon to-left')}>
-        <HeroIcons.ArrowRight className="show" size={size || 16} />
-        <HeroIcons.ArrowRight className="hide" size={size || 16} />
-      </BoxIcon>
-      {name}
-    </>
-  );
-  return type === 'link' ?
+  const content =
+    direction === 'LTR' ? (
+      <>
+        {name}
+        <BoxIcon
+          className="box-icon"
+          sx={{
+            width: size,
+            height: size,
+          }}
+        >
+          <HeroIcons.ArrowRight className="show" size={size || 16} />
+          <HeroIcons.ArrowRight className="hide" size={size || 16} />
+        </BoxIcon>
+      </>
+    ) : (
+      <>
+        <BoxIcon className={clsx('box-icon to-left')}>
+          <HeroIcons.ArrowRight className="show" size={size || 16} />
+          <HeroIcons.ArrowRight className="hide" size={size || 16} />
+        </BoxIcon>
+        {name}
+      </>
+    );
+  return type === 'link' ? (
     <BoxLink
-      className={clsx('link', { 'to-left': direction === 'RTL', }, cls)}
+      className={clsx('link', { 'to-left': direction === 'RTL' }, cls)}
       href={link || '#'}
       onClick={(e) => {
         if (type !== 'link') {
@@ -69,7 +69,11 @@ const ButtonLink: React.FC<Props> = ({
     >
       {content}
     </BoxLink>
-    : <BoxButton className={clsx('', { 'to-left': direction === 'RTL', }, cls)} type={type} >{content}</BoxButton>;
+  ) : (
+    <BoxButton className={clsx('', { 'to-left': direction === 'RTL' }, cls)} type={type}>
+      {content}
+    </BoxButton>
+  );
 };
 const BoxButton = styled('button')(({ theme }) => {
   return {
@@ -79,35 +83,35 @@ const BoxButton = styled('button')(({ theme }) => {
     gap: '10px',
     color: 'var(--clr)',
     '&.gradient-primary': {
-      background: 'linear-gradient(103deg, rgba(36, 76, 255, 1) 0%, rgba(66, 129, 255, 1) 100%)'
+      background: 'linear-gradient(103deg, rgba(36, 76, 255, 1) 0%, rgba(66, 129, 255, 1) 100%)',
     },
     '.box-icon': {
       svg: {
         color: 'var(--clr) !important',
         path: {
           fill: 'var(--clr) !important',
-        }
+        },
       },
     },
     '&:hover': {
       '.show': {
         transform: 'rotate(-45deg) translateX(130%) scale(0)',
-        transition: 'all .15s',
+        transition: 'all .3s',
       },
       '.hide': {
         transform: 'rotate(-45deg) translateX(0%) scale(1)',
-        transition: 'all .15s',
+        transition: 'all .3s',
       },
     },
     '&.to-left': {
       '&:hover': {
         '.show': {
           transform: 'rotate(-135deg) translateX(130%) scale(0)',
-          transition: 'all .15s',
+          transition: 'all .3s',
         },
         '.hide': {
           transform: 'rotate(-135deg) translateX(0%) scale(1)',
-          transition: 'all .15s',
+          transition: 'all .3s',
         },
       },
     },
@@ -121,14 +125,14 @@ const BoxLink = styled(Link)(({ theme }) => {
     gap: '10px',
     color: 'var(--clr)',
     '&.gradient-primary': {
-      background: 'linear-gradient(103deg, rgba(36, 76, 255, 1) 0%, rgba(66, 129, 255, 1) 100%)'
+      background: 'linear-gradient(103deg, rgba(36, 76, 255, 1) 0%, rgba(66, 129, 255, 1) 100%)',
     },
     '.box-icon': {
       svg: {
         color: 'var(--clr) !important',
         path: {
           fill: 'var(--clr) !important',
-        }
+        },
       },
     },
     '&:hover': {

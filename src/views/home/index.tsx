@@ -1,6 +1,5 @@
 import AboutSection from './contents/about';
 import AwardsSection from './contents/awards';
-import BranchSection from './contents/branch';
 import CaseStudiesSection from './contents/case-studies';
 import ClientsSaySection from './contents/clients-say';
 import ContactSection from './contents/contact';
@@ -18,7 +17,7 @@ const HomePage = () => {
   return (
     <div className="home-page">
       <HeroSection />
-      <BranchSection />
+
       <ServiceSection />
       <CaseStudiesSection />
       <WhyChooseUsSection />
