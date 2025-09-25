@@ -9,8 +9,8 @@ const Card: React.FC<Props> = ({ data }) => {
   const { industry, name, desc, image, link, types } = data;
 
   return (
-    <div className="card bg-gray-900 rounded-2xl overflow-hidden xs:p-6 sm:!p-8 flex items-center justify-between xs:flex-col sm:!flex-row min-h-[400px] relative xs:pl-[1.5rem] sm:!pl-[3rem] xl:!pl-[5rem]">
-      <div className="flex-1 pr-8 z-10 h-full flex flex-col justify-between">
+    <div className=" card bg-gray-900 rounded-2xl overflow-hidden xs:p-6 sm:!p-8 flex items-center justify-between xs:flex-col sm:!flex-row min-h-[650px] absolute  xs:pl-[1.5rem] sm:!pl-[3rem] xl:!pl-[5rem]">
+      <div className="flex-[2] pr-8 z-10 h-full flex flex-col justify-between">
         <div className="content">
           <div className="mb-6">
             <span className="text-gray-400 text-sm font-medium tracking-wider uppercase">
@@ -31,7 +31,7 @@ const Card: React.FC<Props> = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex-1 relative xs:mt-8 sm:!mt-0">
+      <div className="flex-[3] relative xs:mt-8 sm:!mt-0 h-full">
         <div className="absolute top-4 right-4 z-20 flex flex-wrap gap-2">
           {types.map((type, index) => (
             <div

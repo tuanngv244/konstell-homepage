@@ -8,7 +8,7 @@ import { useRef, useState } from 'react';
 type Props = {};
 
 const BranchSection: React.FC<Props> = ({}) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(2);
   const splideRef = useRef(null);
 
   const data = [
@@ -218,12 +218,12 @@ const BranchSection: React.FC<Props> = ({}) => {
     <div
       className="branch-section absolute left-0 bottom-0 z-[5]"
       onMouseLeave={() => {
-        setHoveredIndex(null);
+        // setHoveredIndex(null);
         splideRef.current?.splide.Components.AutoScroll.play();
       }}
     >
       <div
-        className={`absolute bottom-full left-0 right-0 z-10 mb-0 w-full transition-all duration-500 ease-out ${
+        className={`absolute bottom-full left-0 right-0 z-1 mb-0 w-full transition-all duration-500 ease-out ${
           hoveredIndex !== null
             ? 'opacity-100 translate-y-0 visible'
             : 'opacity-0 translate-y-4 invisible'
@@ -253,7 +253,7 @@ const BranchSection: React.FC<Props> = ({}) => {
                   {data[hoveredIndex].description}
                 </p>
                 <ButtonLink
-                  cls="inline-flex items-center gap-2  xs:px-4 md:!px-6 xs:py-2 md:!py-3 bg-gradient-primary text-white text-sm font-medium tracking-wider rounded-full transition-all  duration-300"
+                  cls="inline-flex !mt-4 items-center gap-2  xs:px-4 md:!px-6 xs:py-2 md:!py-3 bg-gradient-primary text-white text-sm font-medium tracking-wider rounded-full transition-all  duration-300"
                   name="DISCOVER"
                   link="#"
                   color="#ffffff"
@@ -312,7 +312,7 @@ const BranchSection: React.FC<Props> = ({}) => {
           },
         }}
         extensions={{ AutoScroll }}
-        className="logo-marquee bg-white border-b border-solid border-b-gray-200 py-5"
+        className="logo-marquee bg-white border-b border-solid border-b-gray-200 py-5 "
       >
         {data.map((logo, index) => (
           <SplideSlide
