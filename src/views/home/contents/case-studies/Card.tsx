@@ -9,7 +9,7 @@ const Card: React.FC<Props> = ({ data }) => {
   const { industry, name, desc, image, link, types } = data;
 
   return (
-    <div className=" card bg-gray-900 rounded-2xl overflow-hidden xs:p-6 sm:!p-8 flex items-center justify-between xs:flex-col sm:!flex-row min-h-[650px] absolute  xs:pl-[1.5rem] sm:!pl-[3rem] xl:!pl-[5rem]">
+    <div className=" card will-change-transform bg-gray-900 rounded-2xl overflow-hidden xs:p-6 sm:!p-8 flex items-center justify-between xs:flex-col sm:!flex-row min-h-[650px] absolute  xs:pl-[1.5rem] sm:!pl-[3rem] xl:!pl-[5rem]">
       <div className="flex-[2] pr-8 z-10 h-full flex flex-col justify-between">
         <div className="content">
           <div className="mb-6">

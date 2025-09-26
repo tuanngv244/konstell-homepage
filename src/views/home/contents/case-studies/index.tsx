@@ -149,9 +149,9 @@ const CaseStudiesSection: React.FC<Props> = ({}) => {
         </div>
 
         {/* Case Studies Cards */}
-        <div className="cards h-[350vh] relative">
+        <div className="cards h-[350vh] relative will-change-transform">
           <div className="cards__wrap sticky top-0 left-0 w-full h-screen ">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full will-change-transform">
               <div className="relative w-full h-full grid xs:gap-8 md:!gap-12">
                 {caseStudies.map((caseStudy, index) => (
                   <Card key={index} data={caseStudy} />
