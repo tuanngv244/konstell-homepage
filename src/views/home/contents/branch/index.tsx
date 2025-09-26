@@ -8,7 +8,7 @@ import { useRef, useState } from 'react';
 type Props = {};
 
 const BranchSection: React.FC<Props> = ({}) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(2);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const splideRef = useRef(null);
 
   const data = [
@@ -218,7 +218,7 @@ const BranchSection: React.FC<Props> = ({}) => {
     <div
       className="branch-section absolute left-0 bottom-0 z-[5]"
       onMouseLeave={() => {
-        // setHoveredIndex(null);
+        setHoveredIndex(null);
         splideRef.current?.splide.Components.AutoScroll.play();
       }}
     >
